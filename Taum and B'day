@@ -1,0 +1,16 @@
+public static long taumBday(int b, int w, int bc, int wc, int z) {
+    long cost = 0, bl = b, wl = w, bcl = bc, zl = z, wcl = wc;
+    if(bcl > wcl + zl) // conversion cost of w to b is less than bc.
+    {
+        cost = wl * wcl + (bl * (wcl + zl));
+    }
+    else if (wcl > bcl + zl) // conversion cost of b to w is less than wc.
+    {
+        cost = bl * bcl + (wl * (bcl + zl));
+    }
+    else //Normal calculation
+    {
+        cost = bl * bcl + wl * wcl;
+    }
+    return cost;
+    }
