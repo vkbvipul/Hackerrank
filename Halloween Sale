@@ -1,0 +1,17 @@
+static int howManyGames(int p, int d, int m, int s) {
+        int cost = 0, qty = 0;
+        while(s >= m)
+        {
+            if(qty == 0 )
+            {
+                if(s < p){break;}
+                cost = p;
+            }
+
+            else if(cost > m){cost = cost - d;}
+            if(cost <= m){cost = m;}
+            s = s - cost;
+            if(s>=0){qty++;}
+        }
+        return qty;
+    }
