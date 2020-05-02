@@ -1,0 +1,27 @@
+    static int[] cutTheSticks(int[] arr) {
+        Arrays.sort(arr);
+        int size = arr.length, zerocount = 0,j = 0, i = 0, reduce = 0;
+        int[] cuts = new int[size];
+        while(reduce<size)
+        {
+            zerocount = 0;
+            int first = arr[i];
+            for(;i<size;i++)
+            {
+                arr[i] = arr[i] - first;
+                cuts[j]++;
+                if(arr[i] <= 0)
+                {
+                    zerocount++;
+                }
+            }
+            reduce = reduce + zerocount;
+            j++;
+            i = reduce;
+        }
+    int[] result = new int[j];
+    for(int k = 0;k<j;k++)
+    {
+        result[k] = cuts[k];
+    }
+return result;
