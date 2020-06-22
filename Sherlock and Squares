@@ -1,0 +1,15 @@
+ static int squares(int a, int b) {
+        int count = 0;
+        double sq1 = Math.floor(Math.sqrt(a));
+        int sq = (int) sq1;
+        while((sq * sq)<=b)
+        {
+            if((sq*sq)>=a)
+            {
+                count++;
+            }
+            sq++;
+        }
+
+return count;
+    }
