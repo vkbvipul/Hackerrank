@@ -1,0 +1,13 @@
+static int handshake(int n) {
+        /*
+         * Write your code here.
+         */
+         int count = 0;
+         for ( int i = n; i>0;i--)
+         {
+             count = count + (i - 1);
+         }
+         return count;
+
+
+    }
